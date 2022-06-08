@@ -1,0 +1,9 @@
+   1 with open('playlist.txt', encoding='UTF-8') as file:
+   2     lines = file.readlines()
+   3     lines.sort()
+   4 
+   5     print('Playlist')
+   6     for line in lines:
+   7         if line != 'n':
+   8             record = line.split(';')
+   9             print(record[0], '\t', record[1].upper(), '(' + record[2].lower().rstrip() + ')')
